@@ -1,0 +1,5 @@
+[package]
+description = sFlow analyzer package 
+tags = zeek plugin, zeek analyzer, sFlow protocol analyzer
+script_dir = scripts/RLABS/SFLOW/ 
+build_command = ./configure --zeek-dist=%(zeek_dist)s && make
