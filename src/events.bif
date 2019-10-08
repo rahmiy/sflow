@@ -1,0 +1,40 @@
+## Generated for each sFlow datagram
+##
+## c: The sFlow connection
+## version: sFlow version
+## ip_version: agent's IP version (v4 or v6) -- see https://www.ietf.org/rfc/rfc3176.txt
+## agent_addr: agent's IP address
+## subagent_id: Sub-agent ID
+## seq_num: This datagram's sequence number 
+## sys_uptime: System up time
+## num_samples: Number of sFlow samples in this datagram
+##
+event sflow_event%(c: connection,
+                   version: count,
+		   ip_version: count,
+                   agent_addr: count,
+                   subagent_id: count,
+                   seq_num: count,
+                   sys_uptime: count,
+                   num_samples: count%);
+
+## Reports one or more samples from a connection
+##
+## c: The sFlow connection reporting the samples
+## addr_src: Source IP address of the sampled connection
+## addr_dst: destination IP address of the sampled connection
+## port_src: source port number of the sampled connection
+## port_dst: destination port number of the sampled connection
+## proto: Transport protocol
+## srate: Current sampling rate
+## num_samples: number of samples reported for this connection
+##
+event sflow_pkt_sample%(c: connection, 
+                        addr_src: count,
+                        addr_dst: count,
+                        port_src: count,
+                        port_dst: count,
+                        proto: count, 
+                        srate: count,
+                        num_samples: count%);
+ 

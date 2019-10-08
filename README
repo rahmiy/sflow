@@ -1,0 +1,5 @@
+RLABS::SFLOW
+=================================
+
+Implements an sFlow protocol analyzer (https://en.wikipedia.org/wiki/SFlow)
+
